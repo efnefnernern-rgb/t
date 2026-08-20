@@ -1,21 +1,21 @@
-* {
-    font-family: "JetBrainsMono Nerd Font", "Noto Sans", sans-serif;
-    font-size: 13px;
-}
-window#waybar {
-    background-color: rgba(30, 30, 46, 0.85);
-    color: #cdd6f4;
-}
-#workspaces button {
-    padding: 0 8px;
-    color: #6c7086;
-}
-#workspaces button.active {
-    color: #89b4fa;
-}
-#clock, #battery, #network, #pulseaudio, #tray, #power-profiles-daemon,
-#bluetooth, #idle_inhibitor, #custom-launcher {
-    padding: 0 10px;
-}
-#battery.warning { color: #f9e2af; }
-#battery.critical { color: #f38ba8; }
+font_family      JetBrainsMono Nerd Font
+font_size        12.0
+ 
+cursor_shape     beam
+cursor_blink_interval 0
+ 
+background_opacity 0.92
+window_padding_width 8
+confirm_os_window_close 0
+ 
+include current-theme.conf
+ 
+enable_audio_bell no
+allow_remote_control yes
+ 
+map ctrl+shift+c copy_to_clipboard
+map ctrl+shift+v paste_from_clipboard
+map ctrl+shift+t new_tab
+map ctrl+shift+enter new_window
+map ctrl+tab next_tab
+map ctrl+shift+tab previous_tab
