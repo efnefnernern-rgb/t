@@ -1,8 +1,10 @@
-sudo tee /etc/greetd/config.toml > /dev/null << 'EOF'
-[terminal]
-vt = 1
+sudo tee -a /etc/greetd/regreet.toml > /dev/null << 'EOF'
+[background]
+path = "/usr/share/backgrounds/login.jpg"
+fit = "Cover"
  
-[default_session]
-command = "regreet --cage-cmd 'niri --session'"
-user = "greeter"
+[GTK]
+application_prefer_dark_theme = true
+theme_name = "Adwaita-dark"
+icon_theme_name = "Papirus-Dark"
 EOF
