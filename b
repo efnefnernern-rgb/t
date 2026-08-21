@@ -1,21 +1,16 @@
-font_family      JetBrainsMono Nerd Font
-font_size        12.0
+COMMON_FLAGS="-O2 -march=native -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
  
-cursor_shape     beam
-cursor_blink_interval 0
+# 16 потоков (6P+8E+2LP) — компилируем на самой машине, оставим запас:
+MAKEOPTS="-j12"
  
-background_opacity 0.92
-window_padding_width 8
-confirm_os_window_close 0
+USE="pipewire -pulseaudio elogind -systemd icu X -gnome -kde"
  
-include current-theme.conf
+VIDEO_CARDS="intel"
+INPUT_DEVICES="libinput"
  
-enable_audio_bell no
-allow_remote_control yes
- 
-map ctrl+shift+c copy_to_clipboard
-map ctrl+shift+v paste_from_clipboard
-map ctrl+shift+t new_tab
-map ctrl+shift+enter new_window
-map ctrl+tab next_tab
-map ctrl+shift+tab previous_tab
+ACCEPT_LICENSE="*"
+GRUB_PLATFORMS="efi-64"
