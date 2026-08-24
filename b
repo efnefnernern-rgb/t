@@ -1,7 +1,12 @@
-emerge --ask dev-util/extra-cmake-modules \
-  kde-plasma/kdecoration kde-plasma/frameworkintegration \
-  dev-qt/qtdeclarative:6 \
-  kde-frameworks/kcoreaddons kde-frameworks/kcmutils \
-  kde-frameworks/kcolorscheme kde-frameworks/kconfig \
-  kde-frameworks/kguiaddons kde-frameworks/kiconthemes \
-  kde-frameworks/kwindowsystem
+pacstrap -K /mnt base linux linux-firmware intel-ucode \
+  base-devel git vim nano sudo \
+  networkmanager \
+  grub efibootmgr os-prober \
+  dosfstools mtools \
+  sof-firmware alsa-utils \
+  pipewire pipewire-audio pipewire-alsa pipewire-pulse pipewire-jack wireplumber \
+  bluez bluez-utils \
+  deadbeef \
+  tlp tlp-rdw powertop \
+  reflector man-db man-pages
+ 
